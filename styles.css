@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
-*, ::before, ::after {
+*, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
@@ -47,8 +47,9 @@ header .logo {
 
 header .logo img {
   max-height: 45px;
-  -webkit-filter: invert(200%);
-          filter: invert(200%);
+  -webkit-filter: invert(200%) brightness(115%);
+          filter: invert(200%) brightness(115%);
+  opacity: .8;
   vertical-align: bottom;
 }
 
@@ -74,16 +75,38 @@ header nav div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  position: relative;
+}
+
+header nav div ::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(140, 44, 218, 0.5);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+header nav div :hover::after {
+  -webkit-transform: scaleX(0.2);
+          transform: scaleX(0.2);
 }
 
 header nav div a {
   display: block;
   color: rgba(0, 0, 0, 0.3);
   padding: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 250ms ease-in-out;
+  transition: color 250ms ease-in-out;
 }
 
 header nav div a:hover {
-  color: rgba(0, 0, 0, 0.8);
-  border-bottom: 1px solid black;
+  color: rgba(140, 44, 218, 0.6);
 }
