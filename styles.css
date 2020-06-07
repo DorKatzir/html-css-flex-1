@@ -10,28 +10,34 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: whitesmoke;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
 header {
-  background-color: silver;
-  margin: 0 auto;
-  padding-top: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 18px -10px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 18px -10px rgba(0, 0, 0, 0.25);
+  margin: 3rem auto;
+  padding: 3rem;
   max-width: 960px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 header .logo img {
   max-height: 50px;
-  -webkit-filter: grayscale(100%) brightness(0.15);
-          filter: grayscale(100%) brightness(0.15);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  vertical-align: bottom;
 }
 
 header nav {
@@ -40,7 +46,6 @@ header nav {
   display: flex;
   width: auto;
   height: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 header nav div {
@@ -51,10 +56,12 @@ header nav div {
 
 header nav div a {
   display: block;
-  color: white;
+  color: rgba(0, 0, 0, 0.3);
   padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 header nav div a:hover {
   color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid black;
 }
